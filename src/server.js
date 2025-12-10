@@ -4,6 +4,7 @@ const pool = require("./db");
 
 const app = express();
 app.use(express.json());
+app.set("json spaces", 2);
 
 const searchRoutes = require("./routes/search");
 app.use("/search", searchRoutes);
